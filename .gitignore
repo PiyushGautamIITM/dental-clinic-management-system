@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+env/
+ENV/
+.env
+.venv
+
+# Flask
+instance/
+.webassets-cache
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+dental_clinic.db
+simple_clinic.db
+clinic_database.db
+dental.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Google OAuth
+google_oauth_config.json
+client_secrets.json
+credentials.json
+
+# Ngrok
+ngrok
+ngrok.exe
+
+# Docker
+.dockerignore
