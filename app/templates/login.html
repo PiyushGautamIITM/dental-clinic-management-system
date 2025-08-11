@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Clinic Login</h3>
+<form method="post">
+  <input name="login_id" placeholder="Login ID" class="form-control mb-2" required>
+  <input name="password" type="password" placeholder="Password" class="form-control mb-2" required>
+  <button class="btn btn-primary">Login</button>
+</form>
+{% endblock %}

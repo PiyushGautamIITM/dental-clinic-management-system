@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Register Clinic</h3>
+<form method="post">
+  <input name="name" placeholder="Clinic name" class="form-control mb-2" required>
+  <input name="location" placeholder="Location" class="form-control mb-2">
+  <input name="incharge" placeholder="Incharge name" class="form-control mb-2">
+  <button class="btn btn-success">Register</button>
+</form>
+{% if clinic_code %}
+  <hr>
+  <h5>Saved</h5>
+  <p>Clinic Code: <b>{{ clinic_code }}</b><br>Login ID: <b>{{ login_id }}</b><br>Password: <code>{{ password }}</code></p>
+{% endif %}
+{% endblock %}

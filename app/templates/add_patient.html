@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Add Patient</h3>
+<form method="post">
+  <input name="name" placeholder="Patient name" class="form-control mb-2" required>
+  <input name="sex" placeholder="Sex" class="form-control mb-2">
+  <input name="dob" type="date" class="form-control mb-2">
+  <input name="treatment_type" placeholder="Treatment type" class="form-control mb-2">
+  <input name="mobile_number" placeholder="Mobile" class="form-control mb-2">
+  <button class="btn btn-success">Add</button>
+</form>
+{% endblock %}

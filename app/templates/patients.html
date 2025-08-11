@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Patients</h3>
+<table class="table">
+  <thead><tr><th>ID</th><th>Name</th><th>Treatment</th><th>Age</th><th>Added</th></tr></thead>
+  <tbody>
+    {% for p in patients %}
+    <tr>
+      <td>{{ p.patient_code }}</td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.treatment_type }}</td>
+      <td>{{ p.age or '-' }}</td>
+      <td>{{ p.created_at.strftime('%Y-%m-%d') }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
