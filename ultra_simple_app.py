@@ -2670,10 +2670,10 @@ def generate_report():
             </html>
             '''
             
-        conn.close()
-        return report_html
+            conn.close()
+            return report_html
             
-    elif report_type == "financial":
+        elif report_type == "financial":
             # Financial report
             cursor.execute("""
                 SELECT 
@@ -2701,8 +2701,9 @@ def generate_report():
             </html>
             '''
         
-        conn.close()
-        return f"<h3>Report type '{report_type}' is under development.</h3><a href='/advanced_analytics?clinic_id={clinic_id}'>← Back to Analytics</a>"
+        else:
+            conn.close()
+            return f"<h3>Report type '{report_type}' is under development.</h3><a href='/advanced_analytics?clinic_id={clinic_id}'>← Back to Analytics</a>"
         
     except Exception as e:
         return f"<h3>❌ Error generating report: {str(e)}</h3><a href='/advanced_analytics?clinic_id={clinic_id}'>← Back to Analytics</a>"
